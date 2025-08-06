@@ -1,29 +1,37 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Gift, Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import {
+  Gift,
+  Facebook,
+  Twitter,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' }
-  ]
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+  ];
 
   const quickLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/shop', label: 'Shop' },
-    { href: '/contact', label: 'Contact' }
-  ]
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/shop", label: "Shop" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   const supportLinks = [
-    { href: '#', label: 'FAQ' },
-    { href: '#', label: 'Shipping Info' },
-    { href: '#', label: 'Returns' },
-    { href: '#', label: 'Size Guide' }
-  ]
+    { href: "#", label: "FAQ" },
+    { href: "#", label: "Shipping Info" },
+    { href: "#", label: "Returns" },
+    { href: "#", label: "Size Guide" },
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white">
@@ -41,8 +49,8 @@ export default function Footer() {
               <span className="text-2xl font-bold">Gift Gallery</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Creating magical moments through thoughtfully curated gifts. 
-              Every package tells a story, every gift creates a memory.
+              Creating magical moments through thoughtfully curated gifts. Every
+              package tells a story, every gift creates a memory.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -124,7 +132,8 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-pink-400 mt-1" />
                 <span className="text-gray-300">
-                  123 Gift Street<br />
+                  123 Gift Street
+                  <br />
                   Joy City, JC 12345
                 </span>
               </div>
@@ -143,18 +152,27 @@ export default function Footer() {
             © {new Date().getFullYear()} Gift Gallery. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-pink-400 text-sm transition-colors duration-300">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-pink-400 text-sm transition-colors duration-300"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-pink-400 text-sm transition-colors duration-300">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-pink-400 text-sm transition-colors duration-300"
+            >
               Terms of Service
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-pink-400 text-sm transition-colors duration-300">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-pink-400 text-sm transition-colors duration-300"
+            >
               Cookie Policy
             </Link>
           </div>
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }
